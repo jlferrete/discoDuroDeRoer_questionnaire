@@ -5,7 +5,7 @@
 </div>
 
 <div class="row no-gutters">
-    <button type="button" class="btn btn-primary col-3 rounded-0" *ngFor="let obj of answers">
+    <button type="button" class="btn btn-primary col-3 rounded-0" *ngFor="let obj of answers; let index=index" (click)="checkAnswerIndex(index)">
         {{obj.answer}}
     </button>
 </div>
