@@ -9,3 +9,14 @@
         {{obj.answer}}
     </button>
 </div>
+
+<div class="row no-gutters">
+    <div class="alert alert-primary mt-4 text-center w-100" *ngIf="answerCorrect && answerChoosed" role="alert">
+        <strong>¡Correcto!</strong>
+    </div>
+
+    <div class="alert alert-danger mt-4 text-center w-100" *ngIf="!answerCorrect && answerChoosed" role="alert">
+        <strong>¡Incorrecto!</strong>
+    </div>
+
+</div>

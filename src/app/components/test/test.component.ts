@@ -12,6 +12,7 @@ export class TestComponent implements OnInit {
   public answers: any[];
 
   public answerCorrect: boolean;
+  public answerChoosed: boolean;
 
   constructor() {
     this.question = '¿Cuál es la capital de España?';
@@ -37,6 +38,7 @@ export class TestComponent implements OnInit {
     ];
 
     this.answerCorrect = false;
+    this.answerChoosed = false;
 
    }
 
@@ -45,7 +47,7 @@ export class TestComponent implements OnInit {
 
   checkAnswerIndex(index){
     this.answerCorrect = this.answers[index].correct;
-    console.log(this.answerCorrect);
+    this.answerChoosed = true;
   }
 
 
